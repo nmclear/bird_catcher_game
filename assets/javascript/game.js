@@ -15,11 +15,6 @@ $(document).ready(function() {
     var crystalNum4;
 
 
-
-
-
-
-
 //========================================================================================================================
 //FUNCTIONS
 //========================================================================================================================
@@ -49,30 +44,21 @@ $(document).ready(function() {
             $(".userScore").text(userNum);
     }
 
-
-    // //Reset Round to after win/loss
-    // function resetRound(){
-    //     // Reset Values for TargetNum, crystalNum, and userNum to 0.
-    //         // userNum = 0;
-    //         getRoundValue();
-    // }
-
     //Check for Win or Loss, if so reset game
     function checkGameScore(){
         if(userNum === targetNum){
+            $("#resultAlert").text("You Win!");
             totalWin = totalWin + 1
             getRoundValue();
         }
         else if(userNum > targetNum){
+            $("#resultAlert").text("You Lost!");
             totalLoss = totalLoss + 1
             getRoundValue();
         }
         $(".totalWin").text(totalWin);
         $(".totalLoss").text(totalLoss);
     }
-
-
-
 
 
 //========================================================================================================================
@@ -83,12 +69,6 @@ $(document).ready(function() {
     getRoundValue();
     $(".totalWin").text(totalWin);
     $(".totalLoss").text(totalLoss);
-    console.log(targetNum);
-    console.log(crystalNum1);
-    console.log(crystalNum2);
-    console.log(crystalNum3);
-    console.log(crystalNum4);
-
 
     // Click listeners for crystalButtons and add to userScore
         $("#crystalButton1").click(function(){
@@ -114,9 +94,6 @@ $(document).ready(function() {
             $(".userScore").text(userNum);
             checkGameScore();
         });
-
-
-
 
 
 });
