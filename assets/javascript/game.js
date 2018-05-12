@@ -5,11 +5,10 @@ $(document).ready(function() {
 //VARIABLES
 //========================================================================================================================
 
-    var totalWin;
-    var totalLoss;
+    var totalWin = 0;
+    var totalLoss = 0;
+    var userNum = 0;
     var targetNum;
-    var userNum;
-    var userNumArr = [];
     var crystalNum1;
     var crystalNum2;
     var crystalNum3;
@@ -32,18 +31,45 @@ $(document).ready(function() {
 
     //Sets value for TargetNum and each CrystalNum
     function getRoundValue(){
-        targetNum = getRandomNum(19, 120);
-        $(".targetScore").text(targetNum);
-        crystalNum1 = getRandomNum(1, 12);
-        crystalNum2 = getRandomNum(1, 12);
-        crystalNum3 = getRandomNum(1, 12);
-        crystalNum4 = getRandomNum(1, 12);
+        //Generate target number and display targetScore
+            targetNum = getRandomNum(19, 120);
+            $(".targetScore").text(targetNum);
+        //Generate crystal numbers
+            crystalNum1 = getRandomNum(1, 12);
+            crystalNum2 = getRandomNum(1, 12);
+            crystalNum3 = getRandomNum(1, 12);
+            crystalNum4 = getRandomNum(1, 12);
+        //Set crystalButton values
+            $("#crystalButton1").attr("value", crystalNum1);
+            $("#crystalButton2").attr("value", crystalNum2);
+            $("#crystalButton3").attr("value", crystalNum3);
+            $("#crystalButton4").attr("value", crystalNum4);
+        //Set userScore to 0 and display userScore
+            userNum = 0;    
+            $(".userScore").text(userNum);
     }
 
 
+    // //Reset Round to after win/loss
+    // function resetRound(){
+    //     // Reset Values for TargetNum, crystalNum, and userNum to 0.
+    //         // userNum = 0;
+    //         getRoundValue();
+    // }
 
-
-
+    //Check for Win or Loss, if so reset game
+    function checkGameScore(){
+        if(userNum === targetNum){
+            totalWin = totalWin + 1
+            getRoundValue();
+        }
+        else if(userNum > targetNum){
+            totalLoss = totalLoss + 1
+            getRoundValue();
+        }
+        $(".totalWin").text(totalWin);
+        $(".totalLoss").text(totalLoss);
+    }
 
 
 
@@ -54,12 +80,40 @@ $(document).ready(function() {
 //========================================================================================================================
 
 
-getRoundValue();
-console.log(targetNum);
-console.log(crystalNum1);
-console.log(crystalNum2);
-console.log(crystalNum3);
-console.log(crystalNum4);
+    getRoundValue();
+    $(".totalWin").text(totalWin);
+    $(".totalLoss").text(totalLoss);
+    console.log(targetNum);
+    console.log(crystalNum1);
+    console.log(crystalNum2);
+    console.log(crystalNum3);
+    console.log(crystalNum4);
+
+
+    // Click listeners for crystalButtons and add to userScore
+        $("#crystalButton1").click(function(){
+            userNum = userNum + crystalNum1
+            $(".userScore").text(userNum);
+            checkGameScore();
+        });
+
+        $("#crystalButton2").click(function(){
+            userNum = userNum + crystalNum2
+            $(".userScore").text(userNum);
+            checkGameScore();
+        });
+
+        $("#crystalButton3").click(function(){
+            userNum = userNum + crystalNum3
+            $(".userScore").text(userNum);
+            checkGameScore();
+        });
+
+        $("#crystalButton4").click(function(){
+            userNum = userNum + crystalNum4
+            $(".userScore").text(userNum);
+            checkGameScore();
+        });
 
 
 
