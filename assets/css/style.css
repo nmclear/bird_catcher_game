@@ -1,0 +1,49 @@
+
+body {
+    background-image: url("../images/stardust/stardust.png");
+    color: #a4d3dd;
+}
+
+#crystalButton1,
+#crystalButton2,
+#crystalButton3,
+#crystalButton4 {
+    color: #a4d3dd;
+}
+
+.container {
+    width: 80%
+}
+
+h1 {
+    text-align: center;
+    color: #a4d3dd;
+}
+
+.score {
+    margin-bottom: 20px;
+}
+
+.scoreHeader {
+    text-align: center;
+    font-size: 20px;
+}
+
+.resultTotal {
+    font-size: 20px;
+}
+
+.targetScore,
+.userScore {
+    font-size: 24px;
+    text-align: center;
+}
+
+.crystal {
+    background-color: transparent;
+    border: none;
+}
+
+#resultAlert {
+    text-align: center;
+}
