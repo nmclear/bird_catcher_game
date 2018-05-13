@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <!-- Header -->
     <header>
-        <h1>Crystals Collector</h1>
+        <h1>Bird Collector</h1>
     </header>
 
 <!-- Grid -->
@@ -26,22 +27,28 @@
                     <h3>Game Rules</h3>
                     <ul class="fa-ul">
                         <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span>You will be given a random target number at the start of the game.</li>
-                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</li>
+                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span>There are four birds below. By clicking on a bird you will add a specific amount of points to your total score.</li>
                         <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span>You win the game by matching your total score to the target number, you lose the game if your total score goes above the target number.</li>
-                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span>The value of each crystal is hidden from you until you click on it.</li>
-                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span>Each time the game starts the game will change the values of each crystal.</li>
+                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span>The value of each bird is hidden from you until you click on it.</li>
+                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span>Each time the game starts the game will change the values of each bird.</li>
                     </ul>
                 </p>
             </div>
-            <div class="col-md-3 resultTotal">
-                    <div>Total Win: <span class="totalWin"></span></div>
-            </div>
-            <div class="col-md-3 resultTotal">
-                    <div>Total Loss: <span class="totalLoss"></span></div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12 resultTotal">
+                        <div>Total Win: <span class="totalWin"></span></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 resultTotal">
+                        <div>Total Loss: <span class="totalLoss"></span></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row 2 score">
-            <div class="col-md-6">
+            <div class="col-md-6" id="tScore">
                 <div class="row 2a">
                     <div class="col-md-12">
                         <h3 class="scoreHeader">Target Score</h3>
@@ -53,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" id="uScore">
                 <div class="row 2c">
                     <div class="col-md-12">
                         <h3 class="scoreHeader">User Score</h3>
@@ -67,30 +74,22 @@
             </div>
         </div>
         <div class="row 3">
-            <div class="col-md-3 fa-5x">
+            <div class="col-md-3 col-sm-6 fa-5x">
                 <button id="crystalButton1" class="crystal"><i class="fab fa-themeisle"></i></button>
             </div>
-            <div class="col-md-3 fa-5x">
-                <button id="crystalButton2" class="crystal"><i class="fas fa-frog"></i></button>
+            <div class="col-md-3 col-sm-6 fa-5x">
+                <button id="crystalButton2" class="crystal"><i class="fas fa-crow"></i></button>
             </div>
-            <div class="col-md-3 fa-5x">
+            <div class="col-md-3 col-sm-6 fa-5x">
                 <button id="crystalButton3" class="crystal"><i class="fas fa-kiwi-bird"></button></i>
             </div>
-            <div class="col-md-3 fa-5x">
+            <div class="col-md-3 col-sm-6 fa-5x">
                 <button id="crystalButton4" class="crystal"><i class="fas fa-dove"></i></button>
             </div>
         </div>
         <div class="row 4">
             <div class="col-md-12">
                 <div id="resultAlert" ></div>
-            </div>
-        </div>
-        <div class="row 5">
-            <div class="col-md-6 resultTotal">
-                <div>Total Win: <span class="totalWin"></span></div>
-            </div>
-            <div class="col-md-6 resultTotal">
-                <div>Total Loss: <span class="totalLoss"></span></div>
             </div>
         </div>
     </div>
