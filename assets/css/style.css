@@ -9,20 +9,11 @@ body {
     text-align: center;
 }
 
-#crystalButton1,
-#crystalButton2,
-#crystalButton3,
-#crystalButton4 {
-    color: #a4d3dd;
-}
-
 .container {
     width: 80%
 }
 
 h1 {
-    text-align: center;
-    color: #a4d3dd;
     font-size: 60px;
 }
 
@@ -30,8 +21,8 @@ ul {
     text-align: left;
 }
 
-.score {
-    margin-bottom: 20px;
+.scoreHeader {
+    font-size: 40px;
 }
 
 #uScore,
@@ -40,41 +31,26 @@ ul {
     color: #444349;
     border-radius: 25px;
     height: 150px;
-}
-
-#tScore {
+    font-size: 60px;
     margin-bottom: 20px;
-}
-
-.scoreHeader {
-    text-align: center;
-    font-size: 40px;
 }
 
 .resultTotal {
     font-size: 50px;
     background: #a4d3dd;
     color: #444349;
-    text-align: center;
     height: 100px;
     line-height: 100px;
     margin-bottom: 20px;
     border-radius: 25px;
 }
 
-.targetScore,
-.userScore {
-    font-size: 60px;
-    text-align: center;
+#resultAlert {
+    font-size: 50px;
 }
 
 .crystal {
     background-color: transparent;
     border: none;
-    text-align: center;
-}
-
-#resultAlert {
-    text-align: center;
-    font-size: 50px;
+    color: #a4d3dd;
 }

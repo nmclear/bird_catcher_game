@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crystals Collector</title>
+    <title>Bird Catcher Game</title>
 
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -16,12 +16,13 @@
 
 <!-- Header -->
     <header>
-        <h1>Bird Collector</h1>
+        <h1>Bird Catcher</h1>
     </header>
 
 <!-- Grid -->
     <div class="container">
         <div class="row 1">
+            <!-- Game Rules -->
             <div class="col-md-6">
                 <p class="gameRules">
                     <h3>Game Rules</h3>
@@ -34,6 +35,7 @@
                     </ul>
                 </p>
             </div>
+            <!-- Win/Loss Record-->
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-12 resultTotal">
@@ -47,6 +49,7 @@
                 </div>
             </div>
         </div>
+        <!-- Target and User Score-->
         <div class="row 2 score">
             <div class="col-md-6" id="tScore">
                 <div class="row 2a">
@@ -73,6 +76,7 @@
                 </div>
             </div>
         </div>
+        <!-- Bird Icon Buttons-->
         <div class="row 3">
             <div class="col-md-3 col-sm-6 fa-5x">
                 <button id="crystalButton1" class="crystal"><i class="fab fa-themeisle"></i></button>
@@ -81,12 +85,13 @@
                 <button id="crystalButton2" class="crystal"><i class="fas fa-crow"></i></button>
             </div>
             <div class="col-md-3 col-sm-6 fa-5x">
-                <button id="crystalButton3" class="crystal"><i class="fas fa-kiwi-bird"></button></i>
+                <button id="crystalButton3" class="crystal"><i class="fas fa-kiwi-bird"></i></button>
             </div>
             <div class="col-md-3 col-sm-6 fa-5x">
                 <button id="crystalButton4" class="crystal"><i class="fas fa-dove"></i></button>
             </div>
         </div>
+        <!-- Win/Loss Alert Div -->
         <div class="row 4">
             <div class="col-md-12">
                 <div id="resultAlert" ></div>
