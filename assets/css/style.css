@@ -13,7 +13,8 @@ body {
     width: 80%
 }
 
-h1 {
+h1,
+#resultAlert {
     font-size: 60px;
 }
 
@@ -21,36 +22,40 @@ ul {
     text-align: left;
 }
 
+.scoreSpacing {
+    width: 95%;
+    background: #a4d3dd;
+    color: #444349;
+    border-radius: 90px;
+    height: 150px;
+    font-size: 60px;
+}
+
 .scoreHeader {
     font-size: 40px;
+    padding-top: 5px;
 }
 
 #uScore,
-#tScore {
-    background: #a4d3dd;
-    color: #444349;
-    border-radius: 25px;
-    height: 150px;
-    font-size: 60px;
+#tScore,
+.resultTotal {
     margin-bottom: 20px;
+    padding: 0;
 }
 
-.resultTotal {
+.resultSpacing {
+    width: 95%;
     font-size: 50px;
     background: #a4d3dd;
     color: #444349;
     height: 100px;
     line-height: 100px;
-    margin-bottom: 20px;
-    border-radius: 25px;
-}
-
-#resultAlert {
-    font-size: 50px;
+    border-radius: 90px;
 }
 
 .crystal {
     background-color: transparent;
     border: none;
     color: #a4d3dd;
+    padding: 0;
 }
